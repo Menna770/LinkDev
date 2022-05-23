@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Core/Components/navbar/navbar.component';
 import { FooterComponent } from './Core/Components/footer/footer.component';
 import { BannerComponent } from './Core/Components/banner/banner.component';
 import { ThingsWeDoComponent } from './Core/Components/things-we-do/things-we-do.component';
+import { NewsListingComponent } from './Core/Components/news-listing/news-listing.component';
+import { NewsCardComponent } from './Core/Components/news-card/news-card.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { ThingsWeDoComponent } from './Core/Components/things-we-do/things-we-do
     NavbarComponent,
     FooterComponent,
     BannerComponent,
-    ThingsWeDoComponent
+    ThingsWeDoComponent,
+    NewsListingComponent,
+    NewsCardComponent
   ],
   imports: [
     BrowserModule,

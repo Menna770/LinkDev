@@ -1,0 +1,18 @@
+<div class="news-card border-radius-10 shadow mb-5">
+    <img [src]="newsCard.urlToImage" [alt]="newsCard.title" class="news-card-img">
+    <div class="card-content p-3">
+        <a class="card-title d-block text-decoration-none">{{ newsCard.title }}</a>
+        <div class="d-flex align-items-center gap-2">
+            <img src="assets/images/Icons/date-icon.png" width="20px" height="20px">
+            <p class="card-date mb-0">{{ newsCard.publishedDate }}</p>
+        </div>
+        <div class="actions d-flex justify-content-between mt-3">
+            <span class="category border-radius-10 p-1">
+                {{ newsCard.categoryID }}
+            </span>
+            <div>
+                <button class="btn"></button>
+            </div>
+        </div>
+    </div>
+</div>

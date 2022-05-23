@@ -11,7 +11,9 @@ export class BannerComponent implements OnInit {
 
   banners:any = []
 
-  constructor(private _GeneralServicesService:GeneralServicesService, @Inject(DOCUMENT) private document: Document, private renderer:Renderer2) { }
+  constructor(private _GeneralServicesService:GeneralServicesService,
+              @Inject(DOCUMENT) private document: Document,
+              private renderer:Renderer2) { }
 
   ngOnInit(): void {
     this.getBannerSlides();
@@ -24,7 +26,5 @@ export class BannerComponent implements OnInit {
       console.log(this.banners);
     })
   }
-
-  
 
 }

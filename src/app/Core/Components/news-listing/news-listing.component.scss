@@ -1,0 +1,23 @@
+.category-select {
+    padding: 6px 10px;
+    background-color: #E3E3E3;
+}
+
+.active {
+    background-color:  #0ECEFF;
+    color: #fff;
+}
+
+.show-card {
+    display: block !important;
+}
+
+.hide-card {
+    display: none;
+}
+
+.view-all {
+    button {
+        background-color: #FF7C16;
+    }
+}

@@ -1,0 +1,27 @@
+
+.news-card {
+    width: 360px;
+    height: 530px;
+    border-radius: 10px;
+    border: 1px solid #f3f3f3;
+    .news-card-img {
+        width: 360px;
+        height: 322px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .card-title {
+        margin-bottom: 1.5rem;
+        height: 80px;
+        font-size: 18px;
+        color: #5E6282;
+    }
+    .card-date {
+        color: #707070;
+    }
+    .category {
+        background: #74747433 0% 0% no-repeat padding-box;
+        color: #5E6282;
+    }
+}
