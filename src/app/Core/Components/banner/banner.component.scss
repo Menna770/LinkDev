@@ -1,0 +1,54 @@
+
+/*** Carousel ***/
+.carousel {
+    .carousel-indicators {
+        width: max-content;
+        margin-left: 7rem;
+        button {
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #FF7C16;
+        }
+        .active {
+            width: 45px;
+            height: 35px;
+        }
+        span {
+            margin-top: 0.35rem;
+        }
+    }
+    .carousel-title {
+        width: 48%;
+        margin-top: 12rem;
+    h1 {
+        font-size: 75px;
+    }
+   }
+   .title-overlay {
+       z-index: -10;
+       top: 30%;
+       right: -4rem;
+   }
+   .banner-img {
+       margin-top: 6rem;
+    img {
+        width: 600px;
+        height: 600px;
+    }
+
+   }
+   .find-more {
+       background-color: #FF7C16;
+       color: #fff;
+       border-radius: 10px;
+       padding: 19px 26px;
+   }
+}
+
+/*** Overlay ***/
+.banner-overlay {
+    top: -40%;
+    right: -30%;
+    z-index: -20;
+}

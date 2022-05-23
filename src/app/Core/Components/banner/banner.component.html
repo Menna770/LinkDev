@@ -1,0 +1,64 @@
+<div class="position-relative">
+
+
+  <!-- Start Header -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="container">
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            [style.background]="banners[0].colorCode" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <span>. . . . . . . . . . . . .</span>
+          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[1].colorCode"
+            data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <span>. . . . . . . . . . . . .</span>
+          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[2].colorCode"
+            data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Slides -->
+        <div *ngFor="let banner of banners" class="carousel-item" [ngClass]="{'active': banner.order == 1}">
+          <img class="banner-overlay position-absolute" [src]="banner.overlayUrl" alt="">
+          <div class="d-flex w-100 ">
+            <div class="carousel-title text-dark d-none d-md-block">
+              <h5 class="mb-4" [style.color]="banner.colorCode">{{ banner.category }}</h5>
+              <div class="title position-relative">
+                <h1>{{ banner.title }}</h1>
+                <span class="title-overlay position-absolute">
+                  <img [src]="banner.titleOverlayUrl" height="12px">
+                </span>
+              </div>
+              <p>{{ banner.breif }}</p>
+              <div class="video d-flex align-items-center gap-5 mt-5">
+                <button class="find-more btn">Find out more</button>
+                <div>
+                  <img src="assets/images/Icons/play.JPG" width="40px" height="40px" alt="play-icon">
+                  <a class="mx-3 text-decoration-none text-dark">Play Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="banner-img">
+              <img [src]="banner.imgurl" alt="banner-1">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- next & prev buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- End Header -->
+</div>
