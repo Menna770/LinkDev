@@ -1,0 +1,31 @@
+.news-item {
+    padding-top: 8rem;
+    h3 {
+        color: #F215B6;
+    }
+    .description {
+        color: #5E6282;
+        font-size: 14px;
+    }
+    img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        h3 {
+            width: 90% !important;
+            font-size: 18px;
+        }
+        .description {
+            width: 70% !important;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

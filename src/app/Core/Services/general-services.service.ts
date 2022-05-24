@@ -10,6 +10,7 @@ export class GeneralServicesService {
   constructor(private _HttpClient: HttpClient) { }
 
   categoryId:number = 0;
+  newsItemId:any;
 
   //Base API URL
   baseURL: string = "http://localhost:3000/";
@@ -27,6 +28,11 @@ export class GeneralServicesService {
   //Function to get News Listing from API:
   getNewsListing():Observable<any> {
     return this._HttpClient.get("https://api.npoint.io/d275425a434e02acf2f7");
+  }
+
+  //Function to get each new item data:
+  getNewsItem(id:any):Observable<any> {
+    return this._HttpClient.get(`https://api.npoint.io/d275425a434e02acf2f7/News/${id}`);
   }
   
 }

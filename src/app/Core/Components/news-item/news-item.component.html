@@ -1,0 +1,15 @@
+<section class="news-item text-md-center">
+    <div class="container">
+        <h3 class="w-50 mx-auto my-4 fw-bold">{{ cardContent?.title }}</h3>
+        <div>
+            <img class="border-radius-10 shadow" [src]="cardContent?.urlToImage">
+            <p class="description w-50 mx-auto mt-3">{{ cardContent?.description}}</p>
+            <p>
+                <span>Publish Date: </span><span class="date text-primary mb-5">{{ cardContent?.publishedDate}}</span>
+            </p>
+        </div>
+        <div class="content">
+            <p>{{ cardContent?.content }}</p>
+        </div>
+    </div>
+</section>

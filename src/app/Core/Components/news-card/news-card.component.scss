@@ -24,4 +24,29 @@
         background: #74747433 0% 0% no-repeat padding-box;
         color: #5E6282;
     }
+    .fa-heart,
+    .fa-share-alt {
+        color: #13BEFF;
+        cursor: pointer;
+    }
+    .email {
+        background-color: #FF6666;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .twitter {
+        background-color: #13BEFF;
+    }
+    .facebook {
+        background-color: #3B5998;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .email,
+    .twitter,
+    .facebook {
+        padding: 0.25rem 1rem;
+        font-size: 18px;
+        color: #fff;
+    }
 }

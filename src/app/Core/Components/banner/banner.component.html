@@ -8,12 +8,12 @@
         <!-- Carousel Indicators -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-            [style.background]="banners[0].colorCode" class="active" aria-current="true" aria-label="Slide 1"></button>
+            [style.background]="banners[0]?.colorCode" class="active" aria-current="true" aria-label="Slide 1"></button>
           <span>. . . . . . . . . . . . .</span>
-          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[1].colorCode"
+          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[1]?.colorCode"
             data-bs-slide-to="1" aria-label="Slide 2"></button>
           <span>. . . . . . . . . . . . .</span>
-          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[2].colorCode"
+          <button type="button" data-bs-target="#carouselExampleIndicators" [style.background]="banners[2]?.colorCode"
             data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
@@ -31,7 +31,7 @@
               </div>
               <p>{{ banner.breif }}</p>
               <div class="video d-flex align-items-center gap-5 mt-5">
-                <button class="find-more btn">Find out more</button>
+                <a [href]="banner.videoUrl" target="_blank" class="find-more btn">Find out more</a>
                 <div>
                   <img src="assets/images/Icons/play.JPG" width="40px" height="40px" alt="play-icon">
                   <a class="mx-3 text-decoration-none text-dark">Play Demo</a>

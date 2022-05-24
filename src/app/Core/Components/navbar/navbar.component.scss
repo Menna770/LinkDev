@@ -1,12 +1,22 @@
 /*** Navbar ***/
 .navbar {
     padding-top: 20px;
+    z-index: 999;
     .nav-link {
         color: #212832;
         margin-right: 2rem;
+        &:hover {
+            cursor: pointer;
+            color: #F215B6;
+        }
     }
     .signup-btn {
         border: 1px solid #212832 !important;
         border-radius: 10px;
     }
 }
+
+.active {
+    color: #F215B6 !important;
+}
+

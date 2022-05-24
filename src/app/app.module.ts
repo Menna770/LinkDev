@@ -9,6 +9,8 @@ import { BannerComponent } from './Core/Components/banner/banner.component';
 import { ThingsWeDoComponent } from './Core/Components/things-we-do/things-we-do.component';
 import { NewsListingComponent } from './Core/Components/news-listing/news-listing.component';
 import { NewsCardComponent } from './Core/Components/news-card/news-card.component';
+import { NewsItemComponent } from './Core/Components/news-item/news-item.component';
+import { HomePageComponent } from './Core/Components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NewsCardComponent } from './Core/Components/news-card/news-card.compone
     BannerComponent,
     ThingsWeDoComponent,
     NewsListingComponent,
-    NewsCardComponent
+    NewsCardComponent,
+    NewsItemComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

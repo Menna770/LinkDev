@@ -13,7 +13,7 @@ export class NewsListingComponent implements OnInit {
               private _Renderer:Renderer2,
               @Inject(DOCUMENT) private document: Document) { }
 
-  categoryId:number = 1;
+  categoryId:number = 0;
   newsCategory:any= [];
   News:any = [];
 
@@ -45,7 +45,11 @@ export class NewsListingComponent implements OnInit {
   getNewsListing() {
     this._GeneralServicesService.getNewsListing().subscribe((response) => {
       this.News = response.News;
-      console.log( this.News)
+      console.log( 'news',this.News)
     })
+  };
+
+  ViewAllNews() {
+    this.categoryId = 0;
   };
 }

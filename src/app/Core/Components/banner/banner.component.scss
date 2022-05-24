@@ -5,13 +5,13 @@
         width: max-content;
         margin-left: 7rem;
         button {
-            width: 40px;
+            width: 45px;
             height: 25px;
             border-radius: 50%;
             background-color: #FF7C16;
         }
         .active {
-            width: 45px;
+            width: 48px;
             height: 28px;
         }
         span {
@@ -41,8 +41,18 @@
    .find-more {
        background-color: #FF7C16;
        color: #fff;
+       border: 1px solid #FF7C16;
        border-radius: 10px;
        padding: 19px 26px;
+       position: relative;
+       top: 0;
+       left: 0;
+       z-index: 50;
+       transition: all 0.3s;
+       &:hover {
+        background-color: #fff;
+        color: #FF7C16;
+       }
    }
 }
 
