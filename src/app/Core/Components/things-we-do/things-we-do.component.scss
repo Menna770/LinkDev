@@ -1,141 +1,119 @@
-// .things-we-do-section {
-//     background-color: #EFEFEF;
-//     .things-list {
-//         width: 40%;
-//         height: 600px;
-//         left: 1.15rem;
-//         position: relative;
-//         .things-img {
-//         width: 250px;
-//         height: 250px;
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             }
-//         }
-//     }
-//     .things-qoute {
-//         background-color: #F215B6;
-//         width: 60%;
-//         height: 600px;
-//         .things-qoute-content {
-//             width: 60%;
-//             h2 {
-//                 color: #253776;
-//                 font-size: 36px;
-//             }
-//             p {
-//                 font-size: 28px;
-//             }
-//         }
-//     }
-// }
-
-
 .things-we-do-section {
-    background-color: #EFEFEF;
-    padding: 3rem 0 5rem;
-    .things-list {
-        width: 40%;
-        position: relative;
-        left: 1.15rem;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
-        .things-img {
-            position: relative;
-            width: 250px;
-            height: 250px;
-            &:hover {
-                .overlay {
-                    opacity: 1;
-                }
-            }
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #142e4652;
-                opacity: 0;
-                transition: opacity 0.2s;
-                a {
-                    bottom: 2rem;
-                    left: 1rem;
-                    font-size: 14px;
-                }
-            }
-            h4 {
-                position: absolute;
-                bottom: 3rem;
-                left: 1rem;
-                color: #fff;
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                }
-                    }
-            .item-1 {
-                grid-column-start: 2;
-                margin-top: 5rem;
-                }
-            .item-3, .item-5 {
-                margin-top: -6rem;
-                }
-            .item-4 {
-                margin-bottom: -2rem;
-            }
-            }
-    .things-qoute {
-        width: 60%;
-        background-color: #F215B6;
-        .things-qoute-content {
-            width: 68%;
-            h2 {
-                color: #253776;
-                font-size: 40px;
-                }
-            p {
-                font-size: 22px;
-            }
+  background-color: #efefef;
+  padding: 3rem 0 5rem;
+  .things-list {
+    width: 40%;
+    position: relative;
+    left: 1.15rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    .things-img {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      &:hover {
+        .overlay {
+          opacity: 1;
         }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #142e4672;
+        opacity: 0;
+        transition: all 0.2s;
+        a {
+          bottom: 2rem;
+          left: 1rem;
+          font-size: 14px;
+        }
+      }
+      h4 {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        color: #fff;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
+    .item-1 {
+      grid-column-start: 2;
+      margin-top: 5rem;
+    }
+    .item-3 {
+      transition: all 0.2s;
+      &:hover {
+        transform: translate(-5px, 3px);
+      }
+    }
+    .item-3,
+    .item-5 {
+      margin-top: -6rem;
+    }
+    .item-4 {
+      margin-bottom: -2rem;
+    }
+  }
+  .things-qoute {
+    width: 60%;
+    background-color: #f215b6;
+    .things-qoute-content {
+      width: 68%;
+      h2 {
+        color: #253776;
+        font-size: 40px;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
+  }
 }
 
-
-@media (max-width:991px) {
-.things-we-do-section {
+@media (max-width: 991px) {
+  .things-we-do-section {
     .things-container {
-       display: block !important;
-        .things-list {
+      display: block !important;
+      .things-list {
+        width: 100%;
         display: block;
-            .item-1 {
-                grid-column-start: 1;
-                margin-top: 0;
-                }
-            .item-3, .item-5 {
-                margin-top: 0;
-                }
-            .item-4 {
-                margin-bottom: 0;
-                }
+        left: auto;
+        .things-img {
+          margin: auto;
         }
-        .things-qoute {
-            width: 100%;
-            .things-qoute-content {
-                width: 100%;
-                h2 {
-                    font-size: 20px;
-                    }
-                p {
-                    font-size: 16px;
-                }
-            }
+        .item-1 {
+          grid-column-start: 1;
+          margin-top: 0;
         }
+        .item-3,
+        .item-5 {
+          margin-top: 0;
+        }
+        .item-4 {
+          margin-bottom: 0;
+        }
+      }
+      .things-qoute {
+        width: 100%;
+        padding: 0.75rem;
+        .things-qoute-content {
+          width: 100%;
+          h2 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
     }
-}
+  }
 }

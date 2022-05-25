@@ -10,13 +10,63 @@
             color: #F215B6;
         }
     }
-    .signup-btn {
-        border: 1px solid #212832 !important;
-        border-radius: 10px;
+    .auth {
+        margin-left: 10rem;
+        .signup-btn {
+            margin-left: 1rem;
+            transition: all 0.3;
+            border: 1px solid #212832 !important;
+            border-radius: 10px;
+            &:hover {
+                border: 1px solid #fff !important;
+                background-color: #F215B6;
+                color: #fff;
+            }
+        }
     }
 }
 
 .active {
     color: #F215B6 !important;
+}
+
+//Responsive: 
+@media (max-width: 768px) {
+    .navbar-flexBox {
+        justify-content: flex-start!important;
+        width: max-content !important;
+       
+        }
+}
+
+@media (max-width: 991px) {
+    .navbar-flexBox {
+    .navbar-nav {
+        position: absolute;
+        background: #fff;
+        width: 180px;
+        z-index: 10;
+        left: 44%;
+        padding: 0.5rem;
+        top: 75%;
+        border-radius: 10px;
+    }
+    .auth {
+        margin-left: 0;
+        .signup-btn {
+            margin-left: 0;
+            margin-top: 0.5rem;
+            display: block;
+        }
+    }
+ }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-flexBox {
+    .auth {
+        margin-left: 0;
+        }
+    }
 }
 

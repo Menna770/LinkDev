@@ -15,15 +15,16 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Change navbar background and shadow while scrolling:
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    let element = document.querySelector('.navbar') as HTMLElement;
-    if (window.pageYOffset > element.clientHeight) {
-      element.classList.add('bg-white');
-      element.classList.add('shadow');
+    let navbar = document.querySelector('.navbar') as HTMLElement;
+    if(window.pageYOffset > navbar.clientHeight) {
+      navbar.classList.add('bg-white');
+      navbar.classList.add('shadow');
     } else {
-      element.classList.remove('bg-white');
-      element.classList.remove('shadow');
+      navbar.classList.remove('bg-white');
+      navbar.classList.remove('shadow');
     }
   }
 

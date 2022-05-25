@@ -12,10 +12,12 @@ export class GeneralServicesService {
   categoryId:number = 0;
   newsItemId:any;
 
-  //Base API URL
+  //Base Banner API URL:
   baseURL: string = "http://localhost:3000/";
 
-  //Function to get all banners from banner.json (Please run it locally before running the project)
+  //Function to get all banners from banner.json 
+  //-----> Please run it locally before running the project
+  //Command: json-server --watch banner.json
   getBannerSlides():Observable<any> {
     return this._HttpClient.get(this.baseURL + 'slides');
   }
@@ -30,7 +32,7 @@ export class GeneralServicesService {
     return this._HttpClient.get("https://api.npoint.io/d275425a434e02acf2f7");
   }
 
-  //Function to get each new item data:
+  //Function to get each news item data by id:
   getNewsItem(id:any):Observable<any> {
     return this._HttpClient.get(`https://api.npoint.io/d275425a434e02acf2f7/News/${id}`);
   }

@@ -1,6 +1,9 @@
 import { GeneralServicesService } from './../../Services/general-services.service';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Category } from './../../Interfaces/category.interface';
+import { News } from '../../Interfaces/news.interface';
+
 
 @Component({
   selector: 'app-news-listing',
@@ -14,14 +17,15 @@ export class NewsListingComponent implements OnInit {
               @Inject(DOCUMENT) private document: Document) { }
 
   categoryId:number = 0;
-  newsCategory:any= [];
-  News:any = [];
+  newsCategory:Category[]= [];
+  News:News[] = [];
 
   ngOnInit(): void {
     this.getNewsCategory(); 
     this.getNewsListing();
   };
 
+  //Function that calls a function in general service to get news categories:
   getNewsCategory() {
     this._GeneralServicesService.getNewsCategory().subscribe((response) => {
       this.newsCategory = response.newsCategory;
@@ -29,6 +33,7 @@ export class NewsListingComponent implements OnInit {
     })
   };
 
+  //Function to get category ID and toggle active class:
   getCategoryID(id:number, e:any) {
     this.categoryId = id;
 
@@ -42,13 +47,24 @@ export class NewsListingComponent implements OnInit {
     this._Renderer.addClass(e.target , 'active');
   };
 
+  //Function to sort the news array by their publish date:
+  sortNewssByDate = (array:any) => {
+    const sortMethod = (a:any, b:any) => {
+       return new Date(a.publishedDate).getTime() - new Date(b.publishedDate).getTime();
+    }
+    array.sort(sortMethod);
+  };
+
+  //Function that calls a function in general service to get all news listing:
   getNewsListing() {
     this._GeneralServicesService.getNewsListing().subscribe((response) => {
       this.News = response.News;
-      console.log( 'news',this.News)
+      this.sortNewssByDate(this.News);
+      console.log(this.News)
     })
   };
 
+  //Function to reset categoryId to view all news:
   ViewAllNews() {
     this.categoryId = 0;
   };

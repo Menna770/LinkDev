@@ -20,8 +20,8 @@
         <!-- Carousel Slides -->
         <div *ngFor="let banner of banners" class="carousel-item" [ngClass]="{'active': banner.order == 1}">
           <img class="banner-overlay position-absolute" [src]="banner.overlayUrl" alt="">
-          <div class="d-flex w-100 ">
-            <div class="carousel-title text-dark d-none d-md-block">
+          <div class="banner-flexBox d-flex w-100 ">
+            <div class="carousel-title text-dark d-block">
               <h5 class="mb-4" [style.color]="banner.colorCode">{{ banner.category }}</h5>
               <div class="title position-relative">
                 <h1>{{ banner.title }}</h1>
@@ -31,11 +31,11 @@
               </div>
               <p>{{ banner.breif }}</p>
               <div class="video d-flex align-items-center gap-5 mt-5">
-                <a [href]="banner.videoUrl" target="_blank" class="find-more btn">Find out more</a>
-                <div>
+                <a href="https://www.youtube.com/channel/UCBKa7WmbrDiwm8dqNPHQv8A" target="_blank" class="find-more btn">Find out more</a>
+                <a [href]="banner.videoUrl" target="_blank" class="text-decoration-none d-flex align-items-center gap-2">
                   <img src="assets/images/Icons/play.JPG" width="40px" height="40px" alt="play-icon">
-                  <a class="mx-3 text-decoration-none text-dark">Play Demo</a>
-                </div>
+                  <p class="m-0 text-dark">Play Demo</p>
+                </a>
               </div>
             </div>
             <div class="banner-img">

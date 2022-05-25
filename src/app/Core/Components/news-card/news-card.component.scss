@@ -13,7 +13,7 @@
     }
     .card-title {
         margin-bottom: 1.5rem;
-        height: 80px;
+        height: 90px;
         font-size: 18px;
         color: #5E6282;
     }
@@ -50,3 +50,33 @@
         color: #fff;
     }
 }
+
+//Responsive:
+@media (max-width: 768px) {
+    .news-card {
+        width: 280px;
+        margin: auto;
+        .news-card-img {
+            width: 280px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .news-card {
+        width: 300px;
+        .news-card-img {
+            width: 300px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .news-card {
+        width: 300px;
+        .news-card-img {
+            width: 300px;
+        }
+    }
+}
+

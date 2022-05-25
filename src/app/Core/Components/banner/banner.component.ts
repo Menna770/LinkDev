@@ -1,3 +1,4 @@
+import { Banner } from './../../Interfaces/banner.interface';
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 import { GeneralServicesService } from '../../Services/general-services.service';
@@ -9,7 +10,7 @@ import { GeneralServicesService } from '../../Services/general-services.service'
 })
 export class BannerComponent implements OnInit {
 
-  banners:any = []
+  banners:Banner[] = []
 
   constructor(private _GeneralServicesService:GeneralServicesService,
               @Inject(DOCUMENT) private document: Document,
@@ -21,9 +22,8 @@ export class BannerComponent implements OnInit {
 
   //Function that call function in general service to get all banners:
   getBannerSlides() {
-    this._GeneralServicesService.getBannerSlides().subscribe((response:[]) => {
+    this._GeneralServicesService.getBannerSlides().subscribe((response:Banner[]) => {
       this.banners = response;
-      console.log(this.banners);
     })
   }
 

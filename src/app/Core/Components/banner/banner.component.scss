@@ -61,4 +61,75 @@
     top: -40%;
     right: -30%;
     z-index: -20;
+    animation: circleMove 5s linear infinite;
+
+}
+
+@keyframes circleMove {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
+
+//Responsvise: 
+@media (max-width: 768px) {
+    .carousel {
+        .carousel-indicators {
+            margin: auto;
+            button {
+                width: 25px;
+                height: 5px;
+            }
+            .active {
+                width: 30px;
+                height: 10px;
+            }
+        }
+        .banner-flexBox {
+            flex-direction: column;
+        }
+        .banner-img {
+         img {
+             width: 300px;
+             height: 300px;
+            }
+        }
+        .carousel-title {
+            margin-top: 8rem;
+        h1 {
+            font-size: 35px;
+          }
+          .find-more {
+              padding:  auto;
+          }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .carousel {
+        .carousel-title {
+            width: 100%;
+        h1 {
+            font-size: 35px;
+          }
+          .find-more {
+              padding:  auto;
+          }
+        }
+        .title-overlay {
+            right: -7rem;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .carousel {
+        .carousel-indicators {
+            margin-left: 30rem;
+        }
+    }
 }
