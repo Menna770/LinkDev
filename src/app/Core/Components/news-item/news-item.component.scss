@@ -11,20 +11,26 @@
         width: 400px;
         height: 300px;
         object-fit: cover;
+        display: block;
+        margin: auto;
     }
 }
 
+//Responsive:
 @media (max-width: 768px) {
     .news-item {
         h3 {
             width: 90% !important;
             font-size: 18px;
         }
+        h3, p {
+            text-align: center;
+        }
         .description {
             width: 70% !important;
         }
         img {
-            width: 300px;
+            width: 280px;
             height: 300px;
         }
     }

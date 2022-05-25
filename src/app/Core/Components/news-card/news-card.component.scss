@@ -1,11 +1,11 @@
-
+//Large Screen:
 .news-card {
-    width: 360px;
+    width: 380px;
     height: 530px;
     border-radius: 10px;
     border: 1px solid #f3f3f3;
     .news-card-img {
-        width: 360px;
+        width: 380px;
         height: 322px;
         object-fit: cover;
         border-top-left-radius: 10px;
@@ -71,7 +71,7 @@
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1399px) {
     .news-card {
         width: 300px;
         .news-card-img {
